@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+body {
+  background-image: url("Assets/salon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  margin: 5px;
+  font-weight: bold;
+  color: rgb(51, 29, 13);
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*Contenedor de texto y tabla*/
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+
+/*Parrafo a lado de la tabla*/
+.texto {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.139); /* Fondo semitransparente */
+  backdrop-filter: blur(8px); /* Difumina lo que está detrás */
+  border-radius: 10px;
+}
+
+/*Diseño de tabla*/
+table {
+  width: 100%; /* La tabla ocupa el ancho del contenedor */
+  border-collapse: collapse; /* Bordes unidos */
+  font-family: Arial, sans-serif;
+}
+
+.tabla-contenedor {
+  width: fit-content;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+input {
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+  width: 50px;
+  height: 25px;
+}
+
+th {
+  font-size: 20px;
+  border: 1px solid #ddd; /* Bordes de celdas */
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  font-size: 16px;
+  border: 1px solid #ddd; /* Bordes de celdas */
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #4caf50; /* Color de encabezado */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Filas alternas */
+}
+
+tr:hover {
+  background-color: #ddd; /* Efecto hover */
+}
+
+/*Contenedor Boton Calcular promedio*/
+.cont-botones {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin: 14px;
+}
+
+/*Boton promedio*/
+button {
+  display: inline-flex;       
+  align-items: center;
+  flex-direction: row-reverse;        
+  gap: 8px;                   
+  padding: 12px;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #4caf50;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+/* Estilos para la ventana modal */
+.modal {
+  display: none; /* Oculta por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar {
+  color: red;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Iconos de botones*/
+.icono {
+  width: 15px;
+  height: 15px;
+}

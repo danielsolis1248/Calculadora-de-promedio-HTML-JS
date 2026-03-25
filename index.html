@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de promedios</title>
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+
+    <!--Referencia a codigos JS y CSS-->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="codigo.js"></script>
+
+    <!--Links de fuentes de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <h1>Tabla de calificaciones</h1>
+
+  <div class="contenedor">
+    
+    <!--Texto-->
+    <div class="texto">
+      <h2>Ingrese sus calificaciones para calcular su promedio</h2>
+    </div>
+
+  <!--TABLA-->
+  <div class="tabla-contenedor">
+    <table id="tablaCalificaciones">
+      <tr>
+        <th>Materia</th>
+        <th>Calificación</th>
+      </tr>
+      <tr>
+        <td>Español</td>
+        <td><input type="numbe" class="nota" min="0" max="10"></td>
+      </tr>
+      <tr>
+        <td>Matemáticas</td>
+        <td><input type="numbe" class="nota" min="0" max="10"></td>
+      </tr>
+      <tr>
+        <td>Ciencias naturales</td>
+        <td><input type="numbe" class="nota" min="0" max="10"></td>
+      </tr>
+      <tr>
+        <td>Historia</td>
+        <td><input type="numbe" class="nota" min="0" max="10"></td>
+      </tr>
+      <tr>
+        <td>Geografia</td>
+        <td><input type="numbe" class="nota" min="0" max="10"></td>
+      </tr>
+      <tr>
+        <td>Ingles</td>
+        <td><input type="numbe" class="nota" min="0" max="10"></td>
+      </tr>
+    </table>
+
+  <!--Contenedor de botones-->
+    <div class="cont-botones">
+      <!--Boton de calcular promedio-->
+      <button onclick="calcularPromedio()"> 
+        <img src="Assets/Iconos para botones/calculadora.png" class="icono" alt="icono">
+        Calcular promedio</button>
+
+      <!--Boton de limpiar campos-->
+      <button onclick="limpiarCampos()">
+        <img src="Assets/Iconos para botones/limpiar.png" width="15" height="15">
+        Limpiar</button>
+    </div>
+
+    
+
+  <!--Ventana que muestra el resultado-->
+    <div id="modal" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <p id="resultado"></p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+</html>
